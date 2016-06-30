@@ -1,0 +1,34 @@
+<!-- 样例2： vue 中的组件 -->
+<html>
+<title>测试2</title>
+<script src="./vue.js"></script>
+<body>
+<!-- 这是我们的 View -->
+<div id="example-4">
+  <my-component msg="Hello World!"></my-component>
+</div>
+<script type="text/x-template" id="item-template">
+  <li>
+    <div
+      :class="{bold: isFolder}"
+      @click="toggle"
+      @dblclick.stop="changeType">
+      {{model.name}}
+      <span v-if="isFolder">[{{open ? '-' : '+'}}]</span>
+    </div>
+    <ul v-show="open" v-if="isFolder">
+      <item
+        class="item"
+        v-for="model in model.children"
+        :model="model">
+      </item>
+      <li @click="addChild">+</li>
+    </ul>
+  </li>
+</script>
+<div id="example-42">
+	<item class="item" :model="treeData"></item>
+</div>
+</body>
+<script src="./second.js"></script>
+</html>

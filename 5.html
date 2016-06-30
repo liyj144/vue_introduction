@@ -1,0 +1,25 @@
+<!-- 样例2： vue 中的组件 -->
+<html>
+<title>测试5</title>
+<script src="./vue.js"></script>
+<body>
+<!-- 这是我们的 View -->
+<div id="example-51">
+  <child msg="Hello World!"></child>
+</div>
+<div id="example-52">
+    <input v-model="parentMsg" />
+    <br/>
+    默认单向绑定：<child2 :my-message="parentMsg"></child2> <!-- 默认单向绑定， 父组件信息可以传递到子组件；子组件变化不会传递给父组件-->
+    <br/>
+    双向绑定：<child3 :my-message.sync="parentMsg"></child3> <!-- 双向绑定 -->
+    <br/>
+    单次绑定：<child4 :my-message.once="parentMsg"></child4> <!-- 单次绑定 -->
+</div>
+<div id="example-53">
+    <example53-form username="Liyj"></example53-form>
+    <example53-list></example53-list>
+</div>
+</body>
+<script src="./5.js"></script>
+</html>

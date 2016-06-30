@@ -1,0 +1,14 @@
+<!-- 样例3： vue 简单示例 -->
+<html>
+<title>测试3</title>
+<script src="./vue.js"></script>
+<body>
+<!-- 这是我们的 View -->
+<div id="example-5">
+  <div><input type="text" v-model="name" /></div>
+  <div><input type="text" v-model="status" /></div>
+  <div><input v-on:click="save()" type="button" value="submit" /></div>
+</div>
+</body>
+<script src="./3.js"></script>
+</html>
